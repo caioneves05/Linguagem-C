@@ -9,20 +9,22 @@ Dados de Saída:
 - Quantidade por de kilo por animal: 5
 - Quantidade por dia: 10 
 - Quantidade por mês: 300
-- Custo estimado por mês: 3000.
+- Custo estimado por mês: 3000.*/
 
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
 
 int main() {
-	int quantidade_animal, tipo_animal;
-	float quantidade_comida_dia, quantidade_comida_mes, valor_kilo=3.80, custo_mensal;
+	int tipo_animal;
+	int quantidade_animal;
+	float quantidade_comida_dia=0, quantidade_comida_mes=0, valor_kilo=3.80, custo_mensal=0;
 	
 	printf("\nQual o tipo de animal:\n [1] CACHORRO\n [2]GATO\n [3]Cavalo\n [4]COBRA\n [5]GALINHA\n");
-	scanf("%d", &tipo_animal);
+	scanf("%d",&tipo_animal);
 	
 	printf("\nQuantidade de animais: ");
 	scanf("%d", &quantidade_animal);
