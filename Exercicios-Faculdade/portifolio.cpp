@@ -18,17 +18,20 @@ Dados de Saída:
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	char tipo_animal;
-	int quantidade_animal;
-	float custo_kilo;
+	int quantidade_animal, tipo_animal;
+	float quantidade_comida_dia, quantidade_comida_mes, valor_kilo=3.80, custo_mensal;
 	
-	printf("\nQual o tipo de animal: ");
-	scanf("%s", &tipo_animal);
+	printf("\nQual o tipo de animal:\n [1] CACHORRO\n [2]GATO\n [3]Cavalo\n [4]COBRA\n [5]GALINHA\n");
+	scanf("%d", &tipo_animal);
 	
 	printf("\nQuantidade de animais: ");
 	scanf("%d", &quantidade_animal);
+	if (tipo_animal == 1){
+	    quantidade_comida_dia = 1;
+	    quantidade_comida_mes = quantidade_comida_dia * 30;
+	    custo_mensal = quantidade_comida_mes * valor_kilo;
+	    printf("O Cachorro consome %f kg por dia, %f kg por mês e o custo mensal estimado será de %f.\n"quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	}
 	
-	printf("\nCusto estimado por kilo de comida: ");
-	scanf("%f", &custo_kilo);
 	return 0;
 }
