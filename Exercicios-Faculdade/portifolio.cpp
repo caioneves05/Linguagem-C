@@ -17,23 +17,48 @@ Dados de Saída:
 #include <math.h>
 
 
-
 int main() {
 	int tipo_animal;
 	int quantidade_animal;
 	float quantidade_comida_dia=0, quantidade_comida_mes=0, valor_kilo=3.80, custo_mensal=0;
 	
-	printf("\nQual o tipo de animal:\n [1] CACHORRO\n [2]GATO\n [3]Cavalo\n [4]COBRA\n [5]GALINHA\n");
+	printf("\nQual o tipo de animal:\n [1]CACHORRO\n [2]GATO\n [3]CAVALO\n [4]COBRA\n [5]GALINHA\n ESCOLHA A OPCAO: ");
 	scanf("%d",&tipo_animal);
 	
 	printf("\nQuantidade de animais: ");
 	scanf("%d", &quantidade_animal);
 	if (tipo_animal == 1){
-	    quantidade_comida_dia = 1;
+	    quantidade_comida_dia = quantidade_animal *1;
 	    quantidade_comida_mes = quantidade_comida_dia * 30;
-	    custo_mensal = quantidade_comida_mes * valor_kilo;
-	    printf("O Cachorro consome %f kg por dia, %f kg por mês e o custo mensal estimado será de %f.\n"quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	    custo_mensal = quantidade_comida_mes/quantidade_animal;
+	    printf(" %0.0d Cachorros consomem %0.1fKg por dia, sendo 1Kg por animal, %0.1fKg por mes e o custo mensal estimado para cada aniaml sera de R$%0.0f.\n",quantidade_animal, quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
 	}
+	if (tipo_animal == 2){
+	    quantidade_comida_dia = quantidade_animal *1;
+	    quantidade_comida_mes = quantidade_comida_dia * 30;
+	    custo_mensal = quantidade_comida_mes/quantidade_animal;
+	    printf(" %0.0d Gatos consomem %0.1fKg por dia, sendo 1Kg por animal, %0.1fKg por mes e o custo mensal estimado para cada animal sera de R$%0.0f.\n", quantidade_animal, quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	}
+	if (tipo_animal == 3){
+	    quantidade_comida_dia = quantidade_animal *2.5;
+	    quantidade_comida_mes = quantidade_comida_dia * 30;
+	    custo_mensal = quantidade_comida_mes/quantidade_animal;
+	    printf(" %0.0d Cavalos consomem %0.1fKg por dia, sendo 2.5Kg por animal, %0.1fKg por mes e o custo mensal estimado para cada animal sera de R$%0.0f.\n", quantidade_animal, quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	}
+	if (tipo_animal == 4){
+	    quantidade_comida_dia = quantidade_animal *0.80;
+	    quantidade_comida_mes = quantidade_comida_dia * 30;
+	    custo_mensal = quantidade_comida_mes/quantidade_animal;
+	    printf(" %0.0d Cobras consomem %0.1fKg por dia, sendo 0.8 Gramas por animal, %0.1fKg por mes e o custo mensal estimado para cada animal sera de R$%0.0f.\n", quantidade_animal, quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	}
+	if (tipo_animal == 5){
+	    quantidade_comida_dia = quantidade_animal *0.70;
+	    quantidade_comida_mes = quantidade_comida_dia * 30;
+	    custo_mensal = quantidade_comida_mes/quantidade_animal;
+	    printf(" %0.0d Galinha consomem %0.1fKg por dia, sendo 0.70 Gramas por animal, %0.1fKg por mes e o custo mensal estimado para cada animal sera de R$%0.0f.\n", quantidade_animal, quantidade_comida_dia, quantidade_comida_mes, custo_mensal);
+	}
+	system("pause");
 	
 	return 0;
-}
+	}
+
